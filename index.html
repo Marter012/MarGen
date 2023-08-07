@@ -1,244 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MarGen</title>
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100,@400;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div id="navbar" class="navbar">
-            <div class="navbar-items ">
-                <img src="./img/Logo Forma.png" alt="">
-                <img src="./img/Logo Letras .png" alt="">
-            </div>
-            <div class="navbar-items ">
-               <ul>
-
-                    <li><a href="#"><i class="fa-solid fa-house" style="color: #ffffff;"></i>  Inicio</a></li>
-                    <li><a href="#interiores"><i class="fa-solid fa-couch" style="color: #ffffff;"></i>  Interiores</a></li>
-                    <li><a href="#exteriores"><i class="fa-solid fa-tree" style="color: #ffffff;"></i>  Exteriores</a></li>
-                    <li><a href=""><i class="fa-solid fa-people-group" style="color: #ffffff;"></i>  ¿Quienes Somos?</a></li>
-                    <li><a href="#contacto"><i class="fa-solid fa-headset" style="color: #ffffff;"></i>  Contacto</a></li>
-
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#Category">Categorias</a></li>
-                    <li><a href="">¿Quienes Somos?</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-
-               </ul>
-            </div>
+      <div id="navbar" class="navbar">
+        <div class="navbar-items">
+          <img src="./img/Logo Forma.png" alt="" />
+          <img src="./img/Logo Letras .png" alt="" />
         </div>
+        <div class="navbar-items">
+          <ul>
+            <li>
+              <a href="#inicio"
+                ><i class="fa-solid fa-house" style="color: #ffffff"></i>
+                Inicio</a
+              >
+            </li>
+            <li>
+              <a href="#Category"
+                ><i class="fa-solid fa-couch" style="color: #ffffff"></i>
+                Categorias</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-people-group" style="color: #ffffff"></i>
+                ¿Quienes Somos?</a
+              >
+            </li>
+            <li>
+              <a href="#contacto"
+                ><i class="fa-solid fa-headset" style="color: #ffffff"></i>
+                Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
-        <div class="img-background">
-            <img src="/Jonathan Martinez/img/Logo Forma.png" alt="">
+      <div class="img-background"></div>
+      <a
+        class="WhatsApp"
+        href="https://wa.me/5493541638982/?text=¡Hola quisiera obtener un presupuesto!"
+        ><img alt="Chat on WhatsApp" src="./img/Digital_Glyph_Green.png"
+      /></a>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section id="inicio" class="container-slider">
+        <div class="overlay"></div>
+        <div class="slider">
+          <input type="radio" class="radio" name="img" id="radio1" checked />
+          <input type="radio" class="radio" name="img" id="radio2" />
+          <input type="radio" class="radio" name="img" id="radio3" />
+
+          <div class="slide" id="slide1">
+            <img src="./img/Slider1.jpeg" alt="" />
+            <div class="caption">
+              <span>Amoblamientos a tu medida</span>
+              <p>Diseñamos y armamos tu casa o trabajo.</p>
+            </div>
+          </div>
+          <div class="slide" id="slide2">
+            <img src="./img/Slider2.jpeg" alt="" />
+            <div class="caption">
+              <span class="Intro-Info">
+                Somos una PYME en crecimiento ubicada en la ciudad de Villa
+                Carlos Paz, provincia de Cordoba,Argentina.
+                <br />
+                Buscamos desarrollar nuestro conocimiento proyectando ideas
+                actuales y de vanguardia con el proposito de brindar un servicio
+                artesanal de exlencia, abarcando la creacion de muebles,
+                remodelacion de espacio, rediseños y reparaciones, ofreciendo un
+                diseño personalizado.
+              </span>
+            </div>
+          </div>
+          <div class="slide" id="slide3">
+            <img src="./img/Slider3.jpg" alt="" />
+          </div>
+
+          <div class="dots">
+            <label for="radio1" id="label1"></label>
+            <label for="radio2" id="label2"></label>
+            <label for="radio3" id="label3"></label>
+          </div>
         </div>
-
-        <a class="WhatsApp" href="https://wa.me/5493541638982/?text=¡Hola quisiera obtener un presupuesto!"><img alt="Chat on WhatsApp" src="./img/Digital_Glyph_Green.png" /></a>
- <!-------------------------------------------------------------------------------------------------------------------------------->
-        <section class="container-slider">
-            <div class="overlay"></div>
-            <div class="slider">
-
-                <input type="radio" class="radio" name="img" id="radio1" checked>
-                <input type="radio" class="radio" name="img" id="radio2">
-                <input type="radio" class="radio" name="img" id="radio3">
-
-                <div class="slide" id="slide1">
-                    <img src="./img/Slider1.jpeg" alt="">
-                    <div class="caption">
-                        <span>Amoblamientos a tu medida</span>
-                        <p>Diseñamos y armamos tu casa o trabajo.</p>
-                    </div>
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="./img/Slider2.jpeg" alt="">
-                </div>
-                <div class="slide" id="slide3">
-                    <img src="./img/Slider3.jpg" alt="">
-                </div>
-
-                <div class="dots">
-                    <label for="radio1" id="label1"></label>
-                    <label for="radio2" id="label2"></label>
-                    <label for="radio3" id="label3"></label>
-                </div>
+      </section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section class="planificacion">
+        <div class="sec-planificacion">
+          <h3>¿Como es nuestra planificacion?</h3>
+          <div class="sec-planificacion-cards">
+            <div class="sec-planificacion-card">
+              <div class="sec-planificacion-card front">
+                <i class="fa-solid fa-comments" style="color: #136986"></i>
+                <h4>1.Contacto</h4>
+              </div>
+              <div class="sec-planificacion-card back">
+                <p>
+                  Al contactarse con nosotros, nos pondremos a disposicion para
+                  cumplir su objetivo.
+                </p>
+              </div>
             </div>
-        </section>
- <!-------------------------------------------------------------------------------------------------------------------------------->
-        <section class="slider-section">
-            <div class="slider-container">                
-                <div class="slider position">
-                </div>
+            <div class="sec-planificacion-card">
+              <div class="sec-planificacion-card front">
+                <i class="fa-solid fa-camera-retro" style="color: #8c2f24"></i>
+                <h4>2.Fotos</h4>
+              </div>
+              <div class="sec-planificacion-card back">
+                <p>
+                  Le solicitaremos fotos para tener una vision mas acertada del
+                  producto.
+                </p>
+              </div>
             </div>
-        </section>
-
-        <section id="Category" class="cards">
-            <div class="card">
-                <div class="face front">                  
-                    <img src="./img/interiores.jpeg" alt="">
-                    <h3>Interiores</h3>
-                </div>
-                <div class="face back">
-                    <h3>Interiores</h3>
-                    <p>Alacenas, escritorios, mesadas, rack Tv, repisas, amplio repertorio de muebles
-                        todos a medida y acompañados de un diseño exclusivo.
-                    </p>
-                    <p>Te asesoramos de la mejor manera para preservar tus muebles, brindamos calidad 
-                        y comodidad garantizada.
-                    </p>
-                    <a href="#interiores">Explorar Mas...</a>
-                    <p>Holis</p>
-                </div>
+            <div class="sec-planificacion-card">
+              <div class="sec-planificacion-card front">
+                <i
+                  class="fa-regular fa-pen-to-square"
+                  style="color: #1d4c8c"
+                ></i>
+                <h4>3.Diseño</h4>
+              </div>
+              <div class="sec-planificacion-card back">
+                <p>
+                  Graficamos tu propuesta a fines de representar el modelo
+                  final, tomando medidas si es necesario.
+                </p>
+              </div>
             </div>
-            <div class="card">
-                <div class="face front">
-                    <img src="./img/exteriores.jpeg" alt="">
-                    <h3>Exteriores</h3>
-                </div>
-                <div class="face back">
-                    <h3>Exteriores</h3>
-                    <p>Diseños de fuentes, Luces, parrillas, canteros, juego decorativo.</p>
-                    <p>Conta con nuestra mano de obra para diseñar, reorganizar o reparar tu jardin.</p>
-                    <a href="">Explorar Mas...</a>
-                </div>
+            <div class="sec-planificacion-card">
+              <div class="sec-planificacion-card front">
+                <i
+                  class="fa-solid fa-screwdriver-wrench"
+                  style="color: #0f8c4c"
+                ></i>
+                <h4>4.Materiales</h4>
+              </div>
+              <div class="sec-planificacion-card back">
+                <p>Seleccionamos el material con el que deseas trabajar.</p>
+                <a href="">¡Ver Materiales!</a>
+              </div>
             </div>
-        </section>
- <!-------------------------------------------------------------------------------------------------------------------------------->
-        <section>
-            <div class="sec-planificacion">
-                <h3>
-                    ¿Como es nuestra planificacion?
-                </h3>
-                <div class="sec-planificacion-cards">
-                    <div class="sec-planificacion-card">
-                        <div class="sec-planificacion-card front">
-                            <i class="fa-solid fa-comments" style="color: #136986;"></i>
-                            <h4>1.Contacto</h4>                             
-                        </div>
-                        <div class="sec-planificacion-card back">
-                            <p>
-                                Al contactarnos nos pondremos en contacto con usted
-                                para empezar con la planificacion.
-                            </p>
-                        </div> 
-                    </div>
-                    <div class="sec-planificacion-card">
-                        <div class="sec-planificacion-card front">
-                            <i class="fa-solid fa-camera-retro" style="color: #136986;"></i>
-                          <h4>2.Fotos</h4>  
-                        </div>
-                        <div class="sec-planificacion-card back">
-                            <p>
-                                Le solicitaremos fotos para tener un previo panorama del espacio 
-                                donde realizaremos el labor.
-                            </p>
-                        </div>        
-                    </div>
-                    <div class="sec-planificacion-card">
-                        <div class="sec-planificacion-card front">
-                            <i class="fa-regular fa-pen-to-square" style="color: #136986;"></i>
-                           <h4>3.Diseño</h4>
-                        </div>
-                        <div class="sec-planificacion-card back">
-                            <p>
-                                Empezaremos con el diseño, siguiendo su propuesta o si desea
-                                nosotros asesorando en base a los materiales y el lugar.
-                            </p>
-                        </div>   
-                    </div>
-                    <div class="sec-planificacion-card">
-                        <div class="sec-planificacion-card front">
-                            <i class="fa-solid fa-screwdriver-wrench" style="color: #136986;"></i>
-                           <h4>4.Materiales</h4>
-                        </div>
-                        <div class="sec-planificacion-card back">
-                            <p>
-                                Seleccionamos el material con que desea trabajar.
-                            </p>
-                            <a href="">¡Ver Materiales!</a>
-                        </div>      
-                    </div>
-                    <div class="sec-planificacion-card">
-                        <div class="sec-planificacion-card front">
-                            <i class="fa-solid fa-business-time" style="color: #136986;"></i>
-                         <h4>5.Elaboracion</h4> 
-                        </div>
-                        <div class="sec-planificacion-card back">
-                            <p>
-                                Terminado el proceso de seleccion, le pasaremos un presupuesto,
-                                del cual debera abonar los costos de materiale a forma de seña.
-
-                                ¡A trabajar!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="sec-planificacion-card">
+              <div class="sec-planificacion-card front">
+                <i class="fa-solid fa-business-time" style="color: #8c5f08"></i>
+                <h4>5.Elaboracion</h4>
+              </div>
+              <div class="sec-planificacion-card back">
+                <p>
+                  Finalizada la planificacion, ofreceremos el presupuesto del
+                  cual debera abonar los costos de material a forma de seña.
+                </p>
+              </div>
             </div>
-        </section>
- <!-------------------------------------------------------------------------------------------------------------------------------->
-        <section >
-            <div id="interiores" class="sec-interiores">
-                <h3>Interiores</h3>
-                <div class="sec-interiores-cards">
-                    <img src="./img/interiores (1).jpg" alt="">
-                    <img src="./img/interiores (2).jpg" alt="">
-                    <img src="./img/interiores (3).jpg" alt="">
-                    <img src="./img/interiores (4).jpg" alt="">
-                    <img src="./img/interiores (5).jpg" alt="">
-                    <img src="./img/interiores (6).jpg" alt="">
-                </div>
-            </div>
-        </section>
- <!-------------------------------------------------------------------------------------------------------------------------------->
-        <section >
-            <div id="exteriores" class="sec-interiores">
-                <h3>Exteriores</h3>
-                <div class="sec-interiores-cards">
-                    <img src="./img/exteriores (1).jpg" alt="">
-                    <img src="./img/exteriores (2).jpg" alt="">
-                    <img src="./img/exteriores (3).jpg" alt="">
-                    <img src="./img/exteriores (4).jpg" alt="">
-                </div>
-            </div>
-        </section>
- <!-------------------------------------------------------------------------------------------------------------------------------->
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section class="envios">
+        
+      </section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section id="Category" class="cards">
+        <div class="card">
+          <div class="face front">
+            <img src="./img/interiores.jpeg" alt="" />
+            <h3>Interiores</h3>
+          </div>
+          <div class="face back">
+            <h3>Interiores</h3>
+            <p>
+              Alacenas, escritorios, mesadas, rack Tv, repisas, estantes y un
+              amplio repertorio de muebles a medida y diseño personalizado.
+            </p>
+            <p>
+              Te asesoramos de la mejor manera brindandote calidad y comodidad
+              garantizada.
+            </p>
+            <a href="#interiores">Explorar Mas...</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="face front">
+            <img src="./img/exteriores.jpg" alt="" />
+            <h3>Exteriores</h3>
+          </div>
+          <div class="face back">
+            <h3>Exteriores</h3>
+            <p>
+              Diseños de fuentes, Luces, parrillas, canteros, carteles
+              publicitarios y mas ...
+            </p>
+            <p>
+              Optimizamos, redefinimos y potenciamos la estetica visual de los
+              espacios.
+            </p>
+            <a href="#exteriores">Explorar Mas...</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="face front">
+            <img src="./img/extras.jpeg" alt="" />
+            <h3>Extras</h3>
+          </div>
+          <div class="face back">
+            <h3>Extras</h3>
+            <p>
+              Brindamos servicio de herreria, tambien de reparacion o rediseño
+              de muebles, bases de maquinas de coser, mesas ratoneras, mesas de
+              luz, estructuras metalicas, esquineros y mas...
+            </p>
+            <a href="#extras">Explorar Mas...</a>
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section>
+        <div id="interiores" class="sec-interiores">
+          <h3>Interiores</h3>
+          <div class="sec-interiores-cards">
+            <img src="./img/interiores (1).jpg" alt="" />
+            <img src="./img/interiores (2).jpg" alt="" />
+            <img src="./img/interiores (3).jpg" alt="" />
+            <img src="./img/interiores (4).jpg" alt="" />
+            <img src="./img/interiores (5).jpg" alt="" />
+            <img src="./img/interiores (6).jpg" alt="" />
+          </div>
+        </div>
+        <div id="exteriores" class="sec-exteriores">
+          <h3>Exteriores</h3>
+          <div class="sec-interiores-cards">
+            <img src="./img/exteriores (1).jpg" alt="" />
+            <img src="./img/exteriores (2).jpg" alt="" />
+            <img src="./img/exteriores (3).jpg" alt="" />
+            <img src="./img/exteriores (4).jpg" alt="" />
+          </div>
+        </div>
+        <div id="extras" class="sec-extras">
+          <h3>Extras</h3>
+          <div class="sec-interiores-cards">
+            <img src="./img/extras (1).jpg" alt="" />
+            <img src="./img/extras (2).jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
     </main>
     <footer>
-        <div id="contacto" class="container-footer">
-            <div class="footer-descrip">
-                <h3>¡Aqui nos podes encontrar!</h3>
-                </div>
-            <div class="footer-descrip">
-                <i class="fa-brands fa-whatsapp" style="color: #ffffff;">  xx xxx xx xxx xx</i>
-                <i class="fa-brands fa-instagram" style="color: #ffffff;">  @xxxxxxxx</i>
-                <i class="fa-regular fa-envelope" style="color: #ffffff;">  xxxxxxx♦gmail.com</i>
-            </div>
+      <div id="contacto" class="container-footer">
+        <div class="footer-descrip">
+          <img src="./img/Logo PNG.png" alt="" />
         </div>
+
+        <div class="footer-descrip">
+          <i class="fa-brands fa-instagram" style="color: #ffffff">
+            <a href="https://instagram.com/margenhome?igshid=MzNlNGNkZWQ4Mg=="
+              >MARGENHOME</a
+            ></i
+          >
+          <i class="fa-regular fa-envelope" style="color: #ffffff">
+            <a href="mailto:mauricio.gomez.15@hotmail.com">
+              MarGen@gmail.com</a
+            ></i
+          >
+        </div>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/672f4f1f79.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/672f4f1f79.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
 
 <!-- 
-    Clientes buscan
-    pasan fotos
-    plasmar en papel
-    con medidas se va al lugar
-    materiales se abonan con anticipacion
-    materiales mdf, mdp aglomerado, pino compensado,(18ml)
-    caños estructural cualquier medida
-    cualquier madera dura, eucalipto,eucalipto masiso,paraiso
-
+    MODIFICACIONES
+    
+    envios a domicilio
  -->
-<!-- https://www.youtube.com/watch?v=Y1NSVRkQEVI -->
-<!-- godady -->
-
