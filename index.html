@@ -24,27 +24,21 @@
         <div class="navbar-items">
           <ul>
             <li>
-              <a href="#inicio"
-                ><i class="fa-solid fa-house" style="color: #ffffff"></i>
-                Inicio</a
-              >
+              <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
             </li>
             <li>
               <a href="#Category"
-                ><i class="fa-solid fa-couch" style="color: #ffffff"></i>
-                Categorias</a
+                ><i class="fa-solid fa-couch"></i> Categorias</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fa-solid fa-people-group" style="color: #ffffff"></i>
-                ¿Quienes Somos?</a
+                ><i class="fa-solid fa-people-group"></i> ¿Quienes Somos?</a
               >
             </li>
             <li>
               <a href="#contacto"
-                ><i class="fa-solid fa-headset" style="color: #ffffff"></i>
-                Contacto</a
+                ><i class="fa-solid fa-headset"></i> Contacto</a
               >
             </li>
           </ul>
@@ -52,51 +46,62 @@
       </div>
     </header>
     <main>
-      <div class="img-background"></div>
+      <div class="img-background">
+        <img
+          src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223251/MarGen/knj22fsl4yyivgt0n7dx.jpg"
+          alt=""
+        />
+      </div>
       <a
         class="WhatsApp"
         href="https://wa.me/5493541638982/?text=¡Hola quisiera obtener un presupuesto!"
         ><img alt="Chat on WhatsApp" src="./img/Digital_Glyph_Green.png"
       /></a>
+
       <!-------------------------------------------------------------------------------------------------------------------------------->
-      <section id="inicio" class="container-slider">
-        <div class="overlay"></div>
-        <div class="slider">
-          <input type="radio" class="radio" name="img" id="radio1" checked />
-          <input type="radio" class="radio" name="img" id="radio2" />
-          <input type="radio" class="radio" name="img" id="radio3" />
 
-          <div class="slide" id="slide1">
-            <img src="./img/Slider1.jpeg" alt="" />
-            <div class="caption">
-              <span>Amoblamientos a tu medida</span>
-              <p>Diseñamos y armamos tu casa o trabajo.</p>
-            </div>
-          </div>
-          <div class="slide" id="slide2">
-            <img src="./img/Slider2.jpeg" alt="" />
-            <div class="caption">
-              <span class="Intro-Info">
-                Somos una PYME en crecimiento ubicada en la ciudad de Villa
-                Carlos Paz, provincia de Cordoba,Argentina.
-                <br />
-                Buscamos desarrollar nuestro conocimiento proyectando ideas
-                actuales y de vanguardia con el proposito de brindar un servicio
-                artesanal de exlencia, abarcando la creacion de muebles,
-                remodelacion de espacio, rediseños y reparaciones, ofreciendo un
-                diseño personalizado.
-              </span>
-            </div>
-          </div>
-          <div class="slide" id="slide3">
-            <img src="./img/Slider3.jpg" alt="" />
-          </div>
+      <section id="section-slider" class="section-slider">
+        <div class="slider-container">
+          <button class="arrow left-arrow" id="left">
+            <i class="fas fa-arrow-circle-left"></i>
+          </button>
+          <div
+            class="slide active"
+            style="
+              background-image: url('https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223257/MarGen/p51fy0unf6jlnmtidgrm.jpg');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223259/MarGen/sly5ijqx5mrvitqzzshk.jpg');
+            "
+          ></div>
 
-          <div class="dots">
-            <label for="radio1" id="label1"></label>
-            <label for="radio2" id="label2"></label>
-            <label for="radio3" id="label3"></label>
-          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223251/MarGen/knj22fsl4yyivgt0n7dx.jpg');
+            "
+          ></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images8.alphacoders.com/100/thumb-1920-1005830.jpg');
+            "
+          ></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images6.alphacoders.com/904/thumb-1920-904751.png');
+            "
+          ></div>
+
+          <button class="arrow right-arrow" id="right">
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
         </div>
       </section>
       <!-------------------------------------------------------------------------------------------------------------------------------->
@@ -172,64 +177,85 @@
         </div>
       </section>
       <!-------------------------------------------------------------------------------------------------------------------------------->
-      <section class="envios">
-        
+      <section class="envios"></section>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <section id="Category" class="container__card">
+        <div class="card__father">
+          <div class="card">
+            <div class="card__front">
+              <div class="body__card_front">
+                <img src="./img/interiores.jpeg" alt="" />
+                <h3>Interiores</h3>
+              </div>
+            </div>
+            <div class="card__back">
+              <div class="body__card_back">
+                <h3>Interiores</h3>
+                <p>
+                  Alacenas, escritorios, mesadas, rack Tv, repisas, estantes y
+                  un amplio repertorio de muebles a medida y diseño
+                  personalizado.
+                </p>
+                <p>
+                  Te asesoramos de la mejor manera brindandote calidad y
+                  comodidad garantizada.
+                </p>
+                <a href="#interiores">Explorar Mas...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__father">
+          <div class="card">
+            <div class="card__front">
+              <div class="body__card_front">
+                <img src="./img/exteriores.jpg" alt="" />
+                <h3>Exteriores</h3>
+              </div>
+            </div>
+            <div class="card__back">
+              <div class="body__card_back">
+                <h3>Exteriores</h3>
+                <p>
+                  Diseños de fuentes, Luces, parrillas, canteros, carteles
+                  publicitarios y mas ...
+                </p>
+                <p>
+                  Optimizamos, redefinimos y potenciamos la estetica visual de
+                  los espacios.
+                </p>
+                <a href="#exteriores">Explorar Mas...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__father">
+          <div class="card">
+            <div class="card__front">
+              <div class="body__card_front">
+                <img src="./img/extras.jpeg" alt="" />
+                <h3>Extras</h3>
+              </div>
+            </div>
+            <div class="card__back">
+              <div class="body__card_back">
+                <h3>Extras</h3>
+                <p>
+                  Brindamos servicio de herreria, tambien de reparacion o
+                  rediseño de muebles, bases de maquinas de coser, mesas
+                  ratoneras, mesas de luz, estructuras metalicas, esquineros y
+                  mas...
+                </p>
+                <a href="#extras">Explorar Mas...</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-------------------------------------------------------------------------------------------------------------------------------->
-      <section id="Category" class="cards">
-        <div class="card">
-          <div class="face front">
-            <img src="./img/interiores.jpeg" alt="" />
-            <h3>Interiores</h3>
-          </div>
-          <div class="face back">
-            <h3>Interiores</h3>
-            <p>
-              Alacenas, escritorios, mesadas, rack Tv, repisas, estantes y un
-              amplio repertorio de muebles a medida y diseño personalizado.
-            </p>
-            <p>
-              Te asesoramos de la mejor manera brindandote calidad y comodidad
-              garantizada.
-            </p>
-            <a href="#interiores">Explorar Mas...</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="face front">
-            <img src="./img/exteriores.jpg" alt="" />
-            <h3>Exteriores</h3>
-          </div>
-          <div class="face back">
-            <h3>Exteriores</h3>
-            <p>
-              Diseños de fuentes, Luces, parrillas, canteros, carteles
-              publicitarios y mas ...
-            </p>
-            <p>
-              Optimizamos, redefinimos y potenciamos la estetica visual de los
-              espacios.
-            </p>
-            <a href="#exteriores">Explorar Mas...</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="face front">
-            <img src="./img/extras.jpeg" alt="" />
-            <h3>Extras</h3>
-          </div>
-          <div class="face back">
-            <h3>Extras</h3>
-            <p>
-              Brindamos servicio de herreria, tambien de reparacion o rediseño
-              de muebles, bases de maquinas de coser, mesas ratoneras, mesas de
-              luz, estructuras metalicas, esquineros y mas...
-            </p>
-            <a href="#extras">Explorar Mas...</a>
-          </div>
-        </div>
-      </section>
-      <!-------------------------------------------------------------------------------------------------------------------------------->
+     
       <section>
         <div id="interiores" class="sec-interiores">
           <h3>Interiores</h3>
