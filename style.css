@@ -272,8 +272,14 @@ header {
   border-radius: 20px;
 }
 
-.cardsCategory:hover .card__back{
+.cardsCategory:hover{
+  box-shadow: 0 14px 28px white, 0 10px 10px white;
   transition: 1s;
+
+}
+
+.cardsCategory:hover .card__back{
+  transition: 0.5s;
   top: 0;
 }
 .cardsCategory:hover .card__front h3{

@@ -53,7 +53,6 @@ const activeLeftBtn = () => {
 setBgToBody();
 leftBtn.addEventListener("click", activeLeftBtn);
 rightBtn.addEventListener("click", activeRigthBtn);
-
 ///////////////////////////////////////// SLIDER CATEGORY IMG //////////////////////////////////////////
 
 const sliderContainer = document.querySelector(".slider-container-category");
