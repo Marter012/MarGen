@@ -1,3 +1,5 @@
+///////////////////////////////////////// NAVBAR //////////////////////////////////////////
+
 const nav = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -8,8 +10,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////// SLIDER IMG //////////////////////////////////////////
 
 const sectionSlider = document.getElementById("section-slider");
 const slides = document.querySelectorAll(".slide");
@@ -18,31 +19,27 @@ const rightBtn = document.getElementById("right");
 
 let activeSlide = 0;
 
-function setBgToBody() {
+const setBgToBody = () => {
   sectionSlider.style.backgroundImage =
     slides[activeSlide].style.backgroundImage;
-}
-
-setBgToBody();
-
-function setActiveSlide() {
+};
+const setActiveSlide = () => {
   slides.forEach((slide) => slide.classList.remove("active"));
 
   slides[activeSlide].classList.add("active");
-}
+};
 
-rightBtn.addEventListener("click", () => {
+const activeRigthBtn = () => {
   activeSlide++;
 
   if (activeSlide > slides.length - 1) {
     activeSlide = 0;
   }
-
   setBgToBody();
   setActiveSlide();
-});
+};
 
-leftBtn.addEventListener("click", () => {
+const activeLeftBtn = () => {
   activeSlide--;
 
   if (activeSlide < 0) {
@@ -51,73 +48,138 @@ leftBtn.addEventListener("click", () => {
 
   setBgToBody();
   setActiveSlide();
-});
+};
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+setBgToBody();
+leftBtn.addEventListener("click", activeLeftBtn);
+rightBtn.addEventListener("click", activeRigthBtn);
 
-const sliderContainer = document.querySelector('.slider-container-Interiores')
-const slideRight = document.querySelector('.right-slide-Interiores')
-const slideLeft = document.querySelector('.left-slide-Interiores')
-const upButton = document.querySelector('.up-button-Interiores')
-const downButton = document.querySelector('.down-button-Interiores')
-const slidesLength = slideRight.querySelectorAll('div').length
+///////////////////////////////////////// SLIDER CATEGORY IMG //////////////////////////////////////////
 
-let activeSlideIndex = 0
+const sliderContainer = document.querySelector(".slider-container-category");
+const slideRight = document.querySelector(".right-slide-category");
+const slideLeft = document.querySelector(".left-slide-category");
+const upButton = document.querySelector(".up-button-category");
+const downButton = document.querySelector(".down-button-category");
+const slidesLength = slideRight.querySelectorAll("div").length;
+let activeSlideIndex = 0;
 
-slideLeft.style.top = `-${(slidesLength - 1) * (100)}vh`
-
-upButton.addEventListener('click', () => changeSlide('up'))
-downButton.addEventListener('click', () => changeSlide('down'))
+slideLeft.style.top = `-${(slidesLength - 1) * 110}vh`;
 
 const changeSlide = (direction) => {
-    const sliderHeight = sliderContainer.clientHeight
-    if(direction === 'up') {
-        activeSlideIndex++
-        if(activeSlideIndex > slidesLength - 1) {
-            activeSlideIndex = 0
-        }
-    } else if(direction === 'down') {
-        activeSlideIndex--
-        if(activeSlideIndex < 0) {
-            activeSlideIndex = slidesLength - 1
-        }
+  const sliderHeight = sliderContainer.clientHeight;
+  if (direction === "up") {
+    activeSlideIndex++;
+    if (activeSlideIndex > slidesLength - 1) {
+      activeSlideIndex = 0;
     }
+  } else if (direction === "down") {
+    activeSlideIndex--;
+    if (activeSlideIndex < 0) {
+      activeSlideIndex = slidesLength - 1;
+    }
+  }
 
-    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
-    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
-}
+  slideRight.style.transform = `translateY(-${
+    activeSlideIndex * sliderHeight
+  }px)`;
+  slideLeft.style.transform = `translateY(${
+    activeSlideIndex * sliderHeight
+  }px)`;
+};
 
+upButton.addEventListener("click", () => changeSlide("up"));
+downButton.addEventListener("click", () => changeSlide("down"));
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////// ABOUT //////////////////////////////////////////
 
+const about = document.getElementById("About");
+const aboutLeft = document.getElementById("aboutLeft");
+const aboutRight = document.getElementById("aboutRight");
 
-const panels = document.querySelectorAll('.panel');
+const aboutToggle = () => {
+  if (window.scrollY >= 2000 && window.scrollY <= 2000 + window.innerHeight) {
+    aboutLeft.classList.add("activeAbout");
+    aboutRight.classList.add("activeAbout");
+  } else {
+    aboutLeft.classList.remove("activeAbout");
+    aboutRight.classList.remove("activeAbout");
+  }
+};
+
+window.addEventListener("scroll", aboutToggle);
+
+///////////////////////////////////////// MATERIAL //////////////////////////////////////////
+
+const materialCards = document.getElementsByClassName("material-Cards");
+const materialSpan = document.getElementsByClassName("material-Span");
+
+const materialToggle = () => {
+  if (window.scrollY >= 2700 && window.scrollY) {
+    for (let cards of materialCards) {
+      cards.classList.add("toggle-Material");
+    }
+    for (let card of materialSpan) {
+      card.classList.add("animation-Material");
+    }
+  } else {
+    for (let item of materialCards) {
+      item.classList.remove("toggle-Material");
+    }
+    for (let card of materialSpan) {
+      card.classList.remove("animation-Material");
+    }
+  }
+};
+
+window.addEventListener("scroll", materialToggle);
+
+///////////////////////////////////////// FOOTER //////////////////////////////////////////
+
+const panels = document.querySelectorAll(".panel");
+const networks = document.querySelectorAll(".networks");
+const instagram = document.getElementById("instagram");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+
+const removeActiveClass = () => {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
+};
 
 panels.forEach((panel) => {
-    panel.addEventListener('click', () => {
-        removeActiveClass();
-        panel.classList.add('active');
-        
-    })
+  panel.addEventListener("click", () => {
+    removeActiveClass();
+    panel.classList.add("active");
+  });
 });
 
-function removeActiveClass(){
-    panels.forEach((panel) => {
-        panel.classList.remove('active');
-    })
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-const about = document.getElementById("about");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 2396) {
-    about.classList.add("activeAbout");
-  } else {
-    about.classList.remove("activeAbout");
+const setBackgroundInstagram = () => {
+  if (instagram.classList.contains("active")) {
+    instagram.classList.add("instagram");
+    email.classList.remove("email");
+    phone.classList.remove("phone");
   }
-});
+};
 
-console.log(window.scrollY)
+const setBackgroundEmail = () => {
+  if (email.classList.contains("active")) {
+    instagram.classList.remove("instagram");
+    email.classList.add("email");
+    phone.classList.remove("phone");
+  }
+};
+
+const setBackgroundPhone = () => {
+  if (phone.classList.contains("active")) {
+    instagram.classList.remove("instagram");
+    email.classList.remove("email");
+    phone.classList.add("phone");
+  }
+  console.log(phone.classList.contains("active"));
+};
+
+instagram.addEventListener("click", setBackgroundInstagram);
+email.addEventListener("click", setBackgroundEmail);
+phone.addEventListener("click", setBackgroundPhone);
