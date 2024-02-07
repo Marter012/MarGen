@@ -53,13 +53,13 @@ const activeLeftBtn = () => {
 setBgToBody();
 leftBtn.addEventListener("click", activeLeftBtn);
 rightBtn.addEventListener("click", activeRigthBtn);
-///////////////////////////////////////// SLIDER CATEGORY IMG //////////////////////////////////////////
+///////////////////////////////////////// SLIDER DOUBLE //////////////////////////////////////////
 
-const sliderContainer = document.querySelector(".slider-container-category");
-const slideRight = document.querySelector(".right-slide-category");
-const slideLeft = document.querySelector(".left-slide-category");
-const upButton = document.querySelector(".up-button-category");
-const downButton = document.querySelector(".down-button-category");
+const sliderContainer = document.querySelector(".sliderDoubleContainer");
+const slideRight = document.querySelector(".rightSlideDouble");
+const slideLeft = document.querySelector(".leftSlideDouble");
+const upButton = document.querySelector(".upBtnSlideDouble");
+const downButton = document.querySelector(".downBtnSlideDouble");
 const slidesLength = slideRight.querySelectorAll("div").length;
 let activeSlideIndex = 0;
 
@@ -110,23 +110,23 @@ window.addEventListener("scroll", aboutToggle);
 
 ///////////////////////////////////////// MATERIAL //////////////////////////////////////////
 
-const materialCards = document.getElementsByClassName("material-Cards");
-const materialSpan = document.getElementsByClassName("material-Span");
+const materialCards = document.getElementsByClassName("materialCards");
+const materialSpan = document.getElementsByClassName("materialSpan");
 
 const materialToggle = () => {
-  if (window.scrollY >= 2700 && window.scrollY) {
+  if (window.scrollY >= 2400 && window.scrollY) {
     for (let cards of materialCards) {
-      cards.classList.add("toggle-Material");
+      cards.classList.add("toggleMaterial");
     }
     for (let card of materialSpan) {
-      card.classList.add("animation-Material");
+      card.classList.add("animationMaterial");
     }
   } else {
     for (let item of materialCards) {
-      item.classList.remove("toggle-Material");
+      item.classList.remove("toggleMaterial");
     }
     for (let card of materialSpan) {
-      card.classList.remove("animation-Material");
+      card.classList.remove("animationMaterial");
     }
   }
 };

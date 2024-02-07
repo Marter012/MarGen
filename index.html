@@ -10,6 +10,7 @@
       href="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223250/MarGen/wwvtfi0brlsno3efg7ed.ico"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,23 +21,23 @@
   <body>
     <header>
       <div id="navbar" class="navbar">
-        <div class="navbar-items">
-          <img
+        <div class="navbarItems navbarItemsIMG">
+          <img id="logo"
             src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223257/MarGen/fabafezt6mfncwgjzwms.png"
             alt=""
           />
-          <img
+          <img id="marca"
             src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223255/MarGen/onjggwiodzlazignayfz.png"
             alt=""
           />
         </div>
-        <div class="navbar-items">
+        <div class="navbarItems">
           <ul>
             <li>
               <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
             </li>
             <li>
-              <a href="#Category"
+              <a href="#Categories"
                 ><i class="fa-solid fa-couch"></i> Categorias</a
               >
             </li>
@@ -55,7 +56,7 @@
       </div>
     </header>
     <main>
-      <div class="img-background">
+      <div class="imgBackground">
         <img
           src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223251/MarGen/knj22fsl4yyivgt0n7dx.jpg"
           alt=""
@@ -71,9 +72,9 @@
 
       <!--------------------------------------------SECTION SLIDER --------------------------------------->
 
-      <section id="section-slider" class="section-slider">
-        <div class="slider-container">
-          <button class="arrow left-arrow" id="left">
+      <section id="section-slider" class="sectionSlider">
+        <div class="sliderContainer">
+          <button class="arrowSlider leftArrow" id="left">
             <i class="fas fa-arrow-circle-left"></i>
           </button>
           <div
@@ -96,7 +97,7 @@
             "
           ></div>
 
-          <button class="arrow right-arrow" id="right">
+          <button class="arrowSlider rightArrow" id="right">
             <i class="fas fa-arrow-circle-right"></i>
           </button>
         </div>
@@ -104,67 +105,67 @@
       <!--------------------------------------------SECTION PLANIFICACION --------------------------------------->
 
       <section class="planificacion">
-        <div class="sec-planificacion">
+        <div class="secPlanificacion">
           <h3>¿Como es nuestra planificacion?</h3>
-          <div class="sec-planificacion-cards">
-            <div class="sec-planificacion-card">
-              <div class="sec-planificacion-card front">
+          <div class="secPlanificacionCards">
+            <div class="secPlanificacionCard">
+              <div class="secPlanificacionCard front">
                 <i class="fa-solid fa-comments" style="color: #136986"></i>
                 <h4>1.Contacto</h4>
               </div>
-              <div class="sec-planificacion-card back">
+              <div class="secPlanificacionCard back">
                 <p>
                   Al contactarse con nosotros, nos pondremos a disposicion para
                   cumplir su objetivo.
                 </p>
               </div>
             </div>
-            <div class="sec-planificacion-card">
-              <div class="sec-planificacion-card front">
+            <div class="secPlanificacionCard">
+              <div class="secPlanificacionCard front">
                 <i class="fa-solid fa-camera-retro" style="color: #8c2f24"></i>
                 <h4>2.Fotos</h4>
               </div>
-              <div class="sec-planificacion-card back">
+              <div class="secPlanificacionCard back">
                 <p>
                   Le solicitaremos fotos para tener una vision mas acertada del
                   producto.
                 </p>
               </div>
             </div>
-            <div class="sec-planificacion-card">
-              <div class="sec-planificacion-card front">
+            <div class="secPlanificacionCard">
+              <div class="secPlanificacionCard front">
                 <i
                   class="fa-regular fa-pen-to-square"
                   style="color: #1d4c8c"
                 ></i>
                 <h4>3.Diseño</h4>
               </div>
-              <div class="sec-planificacion-card back">
+              <div class="secPlanificacionCard back">
                 <p>
                   Graficamos tu propuesta a fines de representar el modelo
                   final, tomando medidas si es necesario.
                 </p>
               </div>
             </div>
-            <div class="sec-planificacion-card">
-              <div class="sec-planificacion-card front">
+            <div class="secPlanificacionCard">
+              <div class="secPlanificacionCard front">
                 <i
                   class="fa-solid fa-screwdriver-wrench"
                   style="color: #0f8c4c"
                 ></i>
                 <h4>4.Materiales</h4>
               </div>
-              <div class="sec-planificacion-card back">
+              <div class="secPlanificacionCard back">
                 <p>Seleccionamos el material con el que deseas trabajar.</p>
                 <a href="">¡Ver Materiales!</a>
               </div>
             </div>
-            <div class="sec-planificacion-card">
-              <div class="sec-planificacion-card front">
+            <div class="secPlanificacionCard">
+              <div class="secPlanificacionCard front">
                 <i class="fa-solid fa-business-time" style="color: #8c5f08"></i>
                 <h4>5.Elaboracion</h4>
               </div>
-              <div class="sec-planificacion-card back">
+              <div class="secPlanificacionCard back">
                 <p>
                   Finalizada la planificacion, ofreceremos el presupuesto del
                   cual debera abonar los costos de material a forma de seña.
@@ -174,17 +175,18 @@
           </div>
         </div>
       </section>
-      <!--------------------------------------------SECTION CATEGORY --------------------------------------->
-      <section id="Category" class="container__card">
-        <div class="cardsCategory">
-          <div class="card__front">
+      <!--------------------------------------------SECTION CATEGORIES --------------------------------------->
+      <section id="Categories" class="containerCardCategories">
+
+        <div class="cardsCategories">
+          <div class="cardFrontCategories">
             <img
               src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223253/MarGen/tj5tvotppak8ff3snhy0.jpg"
               alt=""
             />
             <h3>Interiores</h3>
           </div>
-          <div class="card__back">
+          <div class="cardBackCategories">
             <h3>Interiores</h3>
             <p>
               Alacenas, escritorios, mesadas, rack Tv, repisas, estantes y un
@@ -197,15 +199,15 @@
           </div>
         </div>
 
-          <div class="cardsCategory">
-            <div class="card__front">
+          <div class="cardsCategories">
+            <div class="cardFrontCategories">
                 <img
                   src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223247/MarGen/yonmhdieontmmdmcqc5t.jpg"
                   alt=""
                 />
                 <h3>Exteriores</h3>
             </div>
-            <div class="card__back">
+            <div class="cardBackCategories">
                 <h3>Exteriores</h3>
                 <p>
                   Diseños de fuentes, Luces, parrillas, canteros, carteles
@@ -218,15 +220,15 @@
             </div>
           </div>
 
-          <div class="cardsCategory">
-            <div class="card__front">
+          <div class="cardsCategories">
+            <div class="cardFrontCategories">
                 <img
                   src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223250/MarGen/wwwssgybunsrsud6s5mz.jpg"
                   alt=""
                 />
                 <h3>Extras</h3>
             </div>
-            <div class="card__back">
+            <div class="cardBackCategories">
                 <h3>Extras</h3>
                 <p>
                   Brindamos servicio de herreria, tambien de reparacion o
@@ -237,15 +239,15 @@
             </div>
           </div>
       </section>
-      <!--------------------------------------------SECTION CATEGORY IMG --------------------------------------->
-      <section class="slider-category">
-        <div class="slider-container-category">
-          <div class="slider-options-catergory">
+      <!--------------------------------------------SECTION SLIDER DOUBLE --------------------------------------->
+      <section class="sliderDouble">
+        <div class="sliderDoubleContainer">
+          <div class="sliderDoubleOptions">
             <h3>Interiores</h3>
             <h3>Exteriores</h3>
           </div>
 
-          <div class="left-slide-category">
+          <div class="leftSlideDouble">
             <div
               style="
                 background-image: url('https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223254/MarGen/iku9cqiwns4z74jjkbmr.jpg');
@@ -283,7 +285,7 @@
             ></div>
           </div>
 
-          <div class="right-slide-category">
+          <div class="rightSlideDouble">
             <div
               style="
                 background-image: url('https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223247/MarGen/yonmhdieontmmdmcqc5t.jpg');
@@ -311,11 +313,11 @@
             ></div>
           </div>
 
-          <div class="action-buttons-category">
-            <button class="down-button-category">
+          <div class="btnSlideDouble">
+            <button class="downBtnSlideDouble">
               <i class="fas fa-arrow-down"></i>
             </button>
-            <button class="up-button-category">
+            <button class="upBtnSlideDouble">
               <i class="fas fa-arrow-up"></i>
             </button>
           </div>
@@ -340,28 +342,28 @@
       <!--------------------------------------------SECTION MATERIAl --------------------------------------->
 
       <section id="material" class="material">
-        <div class="material-Container">
-          <div class="material-Cards">
+        <div class="materialContainer">
+          <div class="materialCards">
             <h3>Metal</h3>
-            <div class="material-Card">
+            <div class="materialCard">
               <img
                 src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1706484937/MarGen/frri4wglbtvp5i0heufy.jpg"
                 alt="metal"
               />
-              <span class="material-Span"
+              <span class="materialSpan"
                 >da dadnkl dasnk dasl lkdnldn ksdn lq nlk dklsa ndkl l klsan
                 dklas klen klsdna kldawnkl ñlskañl kfgñ nañkcnañ dw</span
               >
             </div>
           </div>
-          <div class="material-Cards">
+          <div class="materialCards">
             <h3>Madera</h3>
-            <div class="material-Card">
+            <div class="materialCard">
               <img
                 src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1706484934/MarGen/s3v8tktmcn2qgpnnxb5s.jpg"
                 alt="madera"
               />
-              <span class="material-Span"
+              <span class="materialSpan"
                 >d dalnrqwkl nskl dal dknalk rnqlelwn lskan land ql ndkwn dla
                 rnqk dnwlnd dxnakl dnqwlk ndwlkn dkalsnl kqnl dq</span
               >
