@@ -18,7 +18,6 @@
     height: 350px;
     display: flex;
     position: relative;
-    overflow: hidden;
     border-radius: 20px;
   }
   /*ABOUT*/
@@ -47,19 +46,22 @@
   .secPlanificacionCards {
     gap: 10px;
   }
+  .secPlanificacionCard h4 {
+    font-size: 16px;
+  }
   .secPlanificacionCard {
     width: 150px;
     height: 150px;
   }
-  
+
   .secPlanificacionCard i {
     font-size: 40px;
   }
-  
+
   .secPlanificacionCard p {
     font-size: 12px;
   }
-  
+
   .secPlanificacionCard a {
     font-size: 13px;
   }
@@ -74,6 +76,15 @@
     p {
       font-size: 0.9rem;
     }
+  }
+  .aboutLeft {
+    height: 70vh;
+    width: 55vw;
+  }
+
+  .aboutRight {
+    height: 75vh;
+    width: 60vw;
   }
 
   /*MATERIAL*/
@@ -90,5 +101,177 @@
     span:hover {
       font-size: 1.2rem;
     }
+  }
+}
+
+/* --------------------------------------------------MOBILE SAMSUNG------------------------------------------------------------ */
+
+@media (max-width: 360px) {
+  /*NAVBAR*/
+  #logo {
+    display: none;
+  }
+  #marca {
+    display: flex;
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+  }
+  .navbar {
+    background-color: white;
+  }
+  .itemsBurger {
+    transform: translateX(+50vw);
+    transition-duration: 1s;
+    flex-direction: column;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 50vw;
+    height: 40vh;
+    color: black;
+    ul {
+      display: flex;
+
+      flex-direction: column;
+    }
+    ul:hover a {
+      color: black;
+    }
+    ul:hover a:hover {
+      color: black;
+      box-shadow: none;
+    }
+    li {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    i {
+      display: none;
+    }
+  }
+  .menuBurger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    justify-content: end;
+    margin-right: 20px;
+    i {
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+  }
+
+  .activeMenu {
+    transform: translateX(0);
+    transition-duration: 1s;
+  }
+
+  /*SLIDER*/
+  .sectionSlider {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sliderContainer {
+    width: 70vw;
+    height: 35vh;
+    box-shadow: none;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .arrowSlider {
+    color: black;
+  }
+
+  /*PLANIFICACION*/
+  .planificacion {
+    height: auto;
+  }
+  .secPlanificacion {
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    font-size: 25px;
+  }
+  .secPlanificacionCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    border: none;
+    border-radius: 0%;
+    border: 1px dashed black;
+  }
+  .front,
+  .back {
+    position: relative;
+    height: 100%;
+    border-radius: 0%;
+    border: none;
+  }
+
+  .secPlanificacionCard:hover .front {
+    display: flex;
+  }
+  /*CATEGORIES*/
+  .sectionCardCategories {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerCardCategories {
+    gap: 15px;
+  }
+  .cardsCategories {
+    width: 70vw;
+    height: 70vh;
+  }
+  /*ABOUT*/
+  .aboutLeft {
+    padding: 15px;
+    width: 80vw;
+  }
+  .aboutRight {
+    width: 85vw;
+  }
+  .aboutMsg {
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  /*MATERIAL*/
+  .materialContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .materialCards {
+    width: 90%;
+    height: 60%;
+  }
+  /*FOOTER*/
+  .container-footer {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  .footer-Data {
+    width: 100%;
+  }
+  .containerIcon {
+    width: 100%;
   }
 }

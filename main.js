@@ -10,6 +10,22 @@ window.addEventListener("scroll", () => {
   }
 });
 
+///////////////////////////////////////// NAVBAR BURGER //////////////////////////////////////////
+
+const btnBurger = document.getElementById("btnBurger");
+const itemsBurger = document.getElementById("itemsBurger");
+console.log(itemsBurger)
+const toggleMenu = () => {
+  if(!itemsBurger.classList.contains("activeMenu")){
+    itemsBurger.classList.add("activeMenu")
+  }else{
+    itemsBurger.classList.remove("activeMenu")
+  }
+}
+
+btnBurger.addEventListener("click",toggleMenu)
+
+
 ///////////////////////////////////////// SLIDER IMG //////////////////////////////////////////
 
 const sectionSlider = document.getElementById("section-slider");
@@ -96,13 +112,22 @@ const about = document.getElementById("About");
 const aboutLeft = document.getElementById("aboutLeft");
 const aboutRight = document.getElementById("aboutRight");
 
-const aboutToggle = () => {
-  if (window.scrollY >= 2000 && window.scrollY <= 2000 + window.innerHeight) {
+const aboutMedia = (width) => {
+  if (window.scrollY >= width && window.scrollY <= width + window.innerHeight) {
     aboutLeft.classList.add("activeAbout");
     aboutRight.classList.add("activeAbout");
   } else {
     aboutLeft.classList.remove("activeAbout");
     aboutRight.classList.remove("activeAbout");
+  }
+}
+
+const aboutToggle = () => {
+  if(window.innerWidth == 360){
+    console.log("f")
+    aboutMedia(3000);
+  }else{
+    aboutMedia(2000)
   }
 };
 
@@ -113,8 +138,8 @@ window.addEventListener("scroll", aboutToggle);
 const materialCards = document.getElementsByClassName("materialCards");
 const materialSpan = document.getElementsByClassName("materialSpan");
 
-const materialToggle = () => {
-  if (window.scrollY >= 2400 && window.scrollY) {
+const materialMedia = (width) => {
+  if (window.scrollY >= width && window.scrollY) {
     for (let cards of materialCards) {
       cards.classList.add("toggleMaterial");
     }
@@ -129,6 +154,16 @@ const materialToggle = () => {
       card.classList.remove("animationMaterial");
     }
   }
+}
+
+const materialToggle = () => {
+  if(window.innerWidth == 360){
+    console.log("hola")
+    materialMedia(3600)
+  }else{
+    materialMedia(2800)
+  }
+  
 };
 
 window.addEventListener("scroll", materialToggle);
