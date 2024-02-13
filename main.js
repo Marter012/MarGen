@@ -123,9 +123,9 @@ const aboutMedia = (width) => {
 }
 
 const aboutToggle = () => {
-  if(window.innerWidth == 360){
+  if(window.innerWidth <= 450){
     console.log("f")
-    aboutMedia(3000);
+    aboutMedia(2400);
   }else{
     aboutMedia(2000)
   }
@@ -157,9 +157,9 @@ const materialMedia = (width) => {
 }
 
 const materialToggle = () => {
-  if(window.innerWidth == 360){
+  if(window.innerWidth <= 450){
     console.log("hola")
-    materialMedia(3600)
+    materialMedia(2700)
   }else{
     materialMedia(2800)
   }

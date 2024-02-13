@@ -226,11 +226,11 @@
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
   .containerCardCategories {
-    gap: 15px;
+    gap: 25px;
   }
   .cardsCategories {
     width: 70vw;
