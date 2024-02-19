@@ -71,6 +71,47 @@ leftBtn.addEventListener("click", activeLeftBtn);
 rightBtn.addEventListener("click", activeRigthBtn);
 ///////////////////////////////////////// SLIDER DOUBLE //////////////////////////////////////////
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("sliders");
+  var dots = document.getElementsByClassName("slideThumbnail");
+  const box1 = document.getElementById("box1");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  console.log(slideIndex);
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      // slides[i].style.display = "inline";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("activeSliders", "");
+  }
+  slides[slideIndex-1].style.display = "flex";
+  // slides[slideIndex-1].style.display = "inline";
+  dots[slideIndex-1].className += " activeSliders";
+  let num = Math.floor(Math.random() * 2);
+  if(num == 1){
+    box1.classList.toggle("box1")
+    console.log("hola")
+  }else{
+    console.log("chau")
+    console.log(num)
+  }
+}
+///////////////////////////////////////// SLIDER DOUBLE //////////////////////////////////////////
+
 const sliderContainer = document.querySelector(".sliderDoubleContainer");
 const slideRight = document.querySelector(".rightSlideDouble");
 const slideLeft = document.querySelector(".leftSlideDouble");

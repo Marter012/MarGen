@@ -83,7 +83,9 @@ header {
   position: fixed;
   z-index: -1;
   height: 100vh;
+  width: 100vw;
   img {
+    width: 100%;
     height: 100%;
     text-align: center;
     object-fit: cover;
@@ -268,6 +270,8 @@ header {
   
 }
 .containerCardCategories {
+  width: 100%;
+  height: 100%;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
@@ -336,99 +340,141 @@ header {
 }
 
 /* ---------------------------------------------------SLIDER - IMG ---------------------------------------------------------- */
-.sliderDouble {
+.SectionSliders {
   width: 100vw;
-  height: 110vh;
-  background: linear-gradient(to top, #ffa949, firebrick);
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
   position: relative;
-  justify-content: end;
-  align-items: center;
-  z-index: +99;
+  padding: 80px;
+}
 
-  h3 {
-    font-size: 3rem;
-    font-weight: 500;
+.holder{
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  background-color: rebeccapurple;
+}
+
+.holder::-webkit-scrollbar {
+  display: none;
+}
+
+.sliders {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+}
+
+.box1{
+  order: 1;
+}
+
+.slidersInfo{
+  width: 50%;
+  text-align: center;
+  align-self: center;
+  color: wheat;
+  margin: 3%;
+}
+
+.sliders img {
+  width: 50%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .prevContainerSliders,
+  .nextContainerSliders {
+    display: none;
+    visibility: hidden;
   }
 }
-.sliderDoubleContainer {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 110vh;
-}
-.sliderDoubleOptions {
+
+.prevContainerSliders,
+.nextContainerSliders {
+  background-color: rgba(250, 250,250, 0.3);  
   position: absolute;
-  z-index: +1;
-  width: 100vw;
+  top: 50%;
+  transform: translate(0, calc(-50% - 54px));
+  color: wheat;
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
+}
+
+.prevContainerSliders {
+  margin-left: 26px;
+  left: 0;
+  border-radius: 30px 0 0 30px;
+}
+
+.prevSliders svg,
+.nextContainerSliders svg {
+  fill: white;
+}
+
+.nextContainerSliders {
+  margin-right: 26px;
+  right: 0;
+  border-radius: 0 30px 30px 0;
+}
+
+
+/* Container for image text */
+.captionContainerSliders {
+  height: 50px;
+  background-color: #222;
+  color: white;
   display: flex;
-  background-color: rgb(250, 250, 250, 0.5);
+  justify-content: space-around;
+  align-items: center;
+}
+.btnSliders{
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(129, 194, 216);
+  opacity: 0.4;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.btnSliders:hover{
+  background-color: #81c2d8;
+  opacity: 1;
+}
+
+.rowSliders{  
+  width: 100%;
+  display: flex;
   justify-content: space-around;
 }
 
-.leftSlideDouble {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s ease-in-out;
-
-  div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
-  }
+.rowSliders:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.rightSlideDouble {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0%;
-  width: 50%;
-  transition: transform 0.5s ease-in-out;
-  div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
-  }
+/* Six columns side by side */
+.columnSliders {
+  float: left;
+  width: 13%;
 }
-.btnSlideDouble button {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 100;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  color: #aaa;
+
+.slideThumbnail {
+  width: 100%;
+  opacity: 0.6;
   cursor: pointer;
-  font-size: 16px;
-  padding: 15px;
-}
-.btnSlideDouble button:hover {
-  color: #222;
 }
 
-.btnSlideDouble button:focus {
-  outline: none;
+.activeSliders{
+  opacity: 1;
 }
-
-.downBtnSlideDouble {
-  transform: translateX(-100%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.upBtnSlideDouble {
-  transform: translateY(-100%);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+.slideThumbnail:hover {
+  opacity: 1;
 }
 /* ---------------------------------------------------ABOUT ---------------------------------------------------------- */
 .about {
