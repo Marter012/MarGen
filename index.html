@@ -11,10 +11,11 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./media.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -63,12 +64,6 @@
       </div>
     </header>
     <main>
-      <div class="imgBackground">
-        <img
-          src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1704223251/MarGen/knj22fsl4yyivgt0n7dx.jpg"
-          alt=""
-        />
-      </div>
       <a
         class="WhatsApp"
         href="https://wa.me/5493541638982/?text=¡Hola quisiera obtener un presupuesto!"
@@ -249,47 +244,8 @@
       <!--------------------------------------------SECTION SLIDER DOUBLE --------------------------------------->
       <section class="SectionSliders">
         <!-- main images -->
-        <div class="holder">
-          <div class="sliders">
-            <div id="box1" class="slidersInfo">
-              <h2>holis</h2>
-              <p>kasjkdnaldandlka</p>
-            </div>
-            <img
-              src="https://images.unsplash.com/photo-1505438157249-00e1b44ee34f?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=dfc554074f522ec42818a052152dac21g"
-              alt=""
-            />
-          </div>
-
-          <div class="sliders">
-            <img
-              src="https://images.unsplash.com/photo-1515870672913-a4c298575776?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=aa80486fd3343134706e785c034b339d"
-            />
-          </div>
-
-          <div class="sliders">
-            <img
-              src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e26ec8c74dc99aff53a60741538cad5f"
-            />
-          </div>
-
-          <div class="sliders">
-            <img
-              src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=583c2bf56c8006e507e2a9905fc1e54c"
-            />
-          </div>
-
-          <div class="sliders">
-            <img
-              src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=69093505f999d8170e9a1aab3771c07e"
-            />
-          </div>
-
-          <div class="sliders">
-            <img
-              src="https://images.unsplash.com/photo-1485199433301-8b7102e86995?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c7783fe3a697b1a2248450120435cbc3"
-            />
-          </div>
+        <div id="holder" class="holder">
+          <!-- Render Main -->
         </div>
 
         <div class="prevContainerSliders">
@@ -312,61 +268,18 @@
         </div>
 
         <div class="captionContainerSliders">
-          <button class="btnSliders">Interiores</button>
-          <button class="btnSliders">Exteriores</button>
-          <button class="btnSliders">Extras</button>
+          <button onclick="updateIndexImg(1)" class="btnSliders">
+            Interiores
+          </button>
+          <button onclick="updateIndexImg(2)" class="btnSliders">
+            Exteriores
+          </button>
+          <button onclick="updateIndexImg(3)" class="btnSliders">Extras</button>
         </div>
 
         <!-- thumnails in a row -->
-        <div class="rowSliders">
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1505438157249-00e1b44ee34f?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=dfc554074f522ec42818a052152dac21g"
-              onclick="currentSlide(1)"
-              alt="Caption One"
-            />
-          </div>
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1515870672913-a4c298575776?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=aa80486fd3343134706e785c034b339d"
-              onclick="currentSlide(2)"
-              alt="Caption Two"
-            />
-          </div>
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e26ec8c74dc99aff53a60741538cad5f"
-              onclick="currentSlide(3)"
-              alt="Caption Three"
-            />
-          </div>
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=583c2bf56c8006e507e2a9905fc1e54c"
-              onclick="currentSlide(4)"
-              alt="Caption Four"
-            />
-          </div>
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=69093505f999d8170e9a1aab3771c07e"
-              onclick="currentSlide(5)"
-              alt="Caption Five"
-            />
-          </div>
-          <div class="columnSliders">
-            <img
-              class="slideThumbnail"
-              src="https://images.unsplash.com/photo-1485199433301-8b7102e86995?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c7783fe3a697b1a2248450120435cbc3"
-              onclick="currentSlide(6)"
-              alt="Caption Six"
-            />
-          </div>
+        <div id="rowSliders" class="rowSliders">
+          <!-- Render Main -->
         </div>
       </section>
       <!--------------------------------------------SECTION ABOUT --------------------------------------->
@@ -388,32 +301,40 @@
       <!--------------------------------------------SECTION MATERIAl --------------------------------------->
 
       <section id="material" class="material">
-        <div class="materialContainer">
-          <div class="materialCards">
-            <h3>Metal</h3>
-            <div class="materialCard">
+        <div class="containerMaterial">
+          <div class="cardMaterial">
+            <div class="cardMaterialIcon">
               <img
-                src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1706484937/MarGen/frri4wglbtvp5i0heufy.jpg"
-                alt="metal"
-              />
-              <span class="materialSpan"
-                >da dadnkl dasnk dasl lkdnldn ksdn lq nlk dklsa ndkl l klsan
-                dklas klen klsdna kldawnkl ñlskañl kfgñ nañkcnañ dw</span
-              >
-            </div>
-          </div>
-          <div class="materialCards">
-            <h3>Madera</h3>
-            <div class="materialCard">
-              <img
-                src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1706484934/MarGen/s3v8tktmcn2qgpnnxb5s.jpg"
+                src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1708731651/MarGen/utnslu2ozmhincy6mfye.png"
                 alt="madera"
               />
-              <span class="materialSpan"
-                >d dalnrqwkl nskl dal dknalk rnqlelwn lskan land ql ndkwn dla
-                rnqk dnwlnd dxnakl dnqwlk ndwlkn dkalsnl kqnl dq</span
-              >
+              <h3>Madera</h3>
             </div>
+            <p>
+              Los elementos más prácticos de un mobiliario, tales como mesas,
+              sillas, estanterías, armarios… son fabricados en madera, aunque
+              esto no tiene por qué ser ni mucho menos clásico, pues existen
+              muchos tipos de madera, que huyen de lo tradicional, según sus
+              colores y la orientación de sus vetas, los acabados y las texturas
+              para alcanzar lo que buscas
+            </p>
+          </div>
+          <div class="cardMaterial">
+            <div class="cardMaterialIcon">
+              <img
+                src="https://res.cloudinary.com/dsgcmsjv4/image/upload/v1708731651/MarGen/h6q6zcbo31bibs6jq3et.png"
+                alt="metal"
+              />
+              <h3>Madera</h3>
+            </div>
+            <p>
+              El aluminio, el acero inoxidable, el acero cortén, el cobre y el
+              latón son algunos de los metales más demandados en la elaboración
+              de muebles, gracias al pragmatismo de sus usos, siendo ideales,
+              tanto para elementos básicos como para otros accesorios, y a ese
+              aspecto desenfadado con un toque de formalidad que otorga a los
+              hogares.
+            </p>
           </div>
         </div>
       </section>
@@ -464,6 +385,7 @@
       src="https://kit.fontawesome.com/672f4f1f79.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./constants.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

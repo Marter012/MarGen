@@ -14,17 +14,15 @@ window.addEventListener("scroll", () => {
 
 const btnBurger = document.getElementById("btnBurger");
 const itemsBurger = document.getElementById("itemsBurger");
-console.log(itemsBurger)
 const toggleMenu = () => {
-  if(!itemsBurger.classList.contains("activeMenu")){
-    itemsBurger.classList.add("activeMenu")
-  }else{
-    itemsBurger.classList.remove("activeMenu")
+  if (!itemsBurger.classList.contains("activeMenu")) {
+    itemsBurger.classList.add("activeMenu");
+  } else {
+    itemsBurger.classList.remove("activeMenu");
   }
-}
+};
 
-btnBurger.addEventListener("click",toggleMenu)
-
+btnBurger.addEventListener("click", toggleMenu);
 
 ///////////////////////////////////////// SLIDER IMG //////////////////////////////////////////
 
@@ -69,17 +67,79 @@ const activeLeftBtn = () => {
 setBgToBody();
 leftBtn.addEventListener("click", activeLeftBtn);
 rightBtn.addEventListener("click", activeRigthBtn);
+
 ///////////////////////////////////////// SLIDER DOUBLE //////////////////////////////////////////
+
+const holder = document.getElementById("holder");
+const rowSliders = document.getElementById("rowSliders");
+let indexButton = 1;
+
+const renderInterioresIMG = (imgTop) => {
+  const { id, img, desc, title } = imgTop;
+  return `
+  <div class="sliders">
+    <div id="box1" class="slidersInfo">
+      <h2>${title}</h2>
+      <p>${desc}</p>
+    </div>
+    <img
+      src=${img}
+      alt={${title}}
+    />
+  </div>
+`;
+};
+
+const renderHolderIMG = (sliders) => {
+  holder.innerHTML = sliders.map(renderInterioresIMG).join("");
+};
+
+const renderInterioresIMGBottom = (imgBottom) => {
+  const { img, id, title } = imgBottom;
+  return `
+  <div class="columnSliders">
+    <img
+      class="slideThumbnail"
+      src=${img}
+      onclick="currentSlide(${id})"
+      alt=${title}
+    />
+  </div>
+  `;
+};
+
+const renderHolderIMGBottom = (sliders) => {
+  rowSliders.innerHTML = sliders.map(renderInterioresIMGBottom).join("");
+};
+
+renderHolderIMGBottom(descInteriores);
+renderHolderIMG(descInteriores);
+
+const updateIndexImg = (value) => {
+  indexButton = value;
+  updateSlidersImg(indexButton);
+};
+
+function updateSlidersImg(index) {
+  if (index == 1) {
+    renderHolderIMGBottom(descInteriores);
+    renderHolderIMG(descInteriores);
+  } else if (index == 2) {
+    renderHolderIMGBottom(descExteriores);
+    renderHolderIMG(descExteriores);
+  }
+  showSlides(slideIndex);
+}
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
@@ -87,66 +147,28 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("sliders");
   var dots = document.getElementsByClassName("slideThumbnail");
   const box1 = document.getElementById("box1");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  console.log(slideIndex);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
 
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      // slides[i].style.display = "inline";
+    slides[i].style.display = "none";
+    // slides[i].style.display = "inline";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace("activeSliders", "");
+    dots[i].className = dots[i].className.replace("activeSliders", "");
   }
-  slides[slideIndex-1].style.display = "flex";
+  slides[slideIndex - 1].style.display = "flex";
   // slides[slideIndex-1].style.display = "inline";
-  dots[slideIndex-1].className += " activeSliders";
+  dots[slideIndex - 1].className += " activeSliders";
   let num = Math.floor(Math.random() * 2);
-  if(num == 1){
-    box1.classList.toggle("box1")
-    console.log("hola")
-  }else{
-    console.log("chau")
-    console.log(num)
+  if (num == 1) {
+    box1.classList.toggle("box1");
   }
 }
-///////////////////////////////////////// SLIDER DOUBLE //////////////////////////////////////////
-
-const sliderContainer = document.querySelector(".sliderDoubleContainer");
-const slideRight = document.querySelector(".rightSlideDouble");
-const slideLeft = document.querySelector(".leftSlideDouble");
-const upButton = document.querySelector(".upBtnSlideDouble");
-const downButton = document.querySelector(".downBtnSlideDouble");
-const slidesLength = slideRight.querySelectorAll("div").length;
-let activeSlideIndex = 0;
-
-slideLeft.style.top = `-${(slidesLength - 1) * 110}vh`;
-
-const changeSlide = (direction) => {
-  const sliderHeight = sliderContainer.clientHeight;
-  if (direction === "up") {
-    activeSlideIndex++;
-    if (activeSlideIndex > slidesLength - 1) {
-      activeSlideIndex = 0;
-    }
-  } else if (direction === "down") {
-    activeSlideIndex--;
-    if (activeSlideIndex < 0) {
-      activeSlideIndex = slidesLength - 1;
-    }
-  }
-
-  slideRight.style.transform = `translateY(-${
-    activeSlideIndex * sliderHeight
-  }px)`;
-  slideLeft.style.transform = `translateY(${
-    activeSlideIndex * sliderHeight
-  }px)`;
-};
-
-upButton.addEventListener("click", () => changeSlide("up"));
-downButton.addEventListener("click", () => changeSlide("down"));
-
 ///////////////////////////////////////// ABOUT //////////////////////////////////////////
 
 const about = document.getElementById("About");
@@ -161,14 +183,13 @@ const aboutMedia = (width) => {
     aboutLeft.classList.remove("activeAbout");
     aboutRight.classList.remove("activeAbout");
   }
-}
+};
 
 const aboutToggle = () => {
-  if(window.innerWidth <= 450){
-    console.log("f")
+  if (window.innerWidth <= 450) {
     aboutMedia(2400);
-  }else{
-    aboutMedia(2000)
+  } else {
+    aboutMedia(2000);
   }
 };
 
@@ -176,38 +197,6 @@ window.addEventListener("scroll", aboutToggle);
 
 ///////////////////////////////////////// MATERIAL //////////////////////////////////////////
 
-const materialCards = document.getElementsByClassName("materialCards");
-const materialSpan = document.getElementsByClassName("materialSpan");
-
-const materialMedia = (width) => {
-  if (window.scrollY >= width && window.scrollY) {
-    for (let cards of materialCards) {
-      cards.classList.add("toggleMaterial");
-    }
-    for (let card of materialSpan) {
-      card.classList.add("animationMaterial");
-    }
-  } else {
-    for (let item of materialCards) {
-      item.classList.remove("toggleMaterial");
-    }
-    for (let card of materialSpan) {
-      card.classList.remove("animationMaterial");
-    }
-  }
-}
-
-const materialToggle = () => {
-  if(window.innerWidth <= 450){
-    console.log("hola")
-    materialMedia(2700)
-  }else{
-    materialMedia(2800)
-  }
-  
-};
-
-window.addEventListener("scroll", materialToggle);
 
 ///////////////////////////////////////// FOOTER //////////////////////////////////////////
 
@@ -252,7 +241,6 @@ const setBackgroundPhone = () => {
     email.classList.remove("email");
     phone.classList.add("phone");
   }
-  console.log(phone.classList.contains("active"));
 };
 
 instagram.addEventListener("click", setBackgroundInstagram);
