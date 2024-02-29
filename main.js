@@ -1,3 +1,13 @@
+///////////////////////////////////////// FUNCTIONS ///////////////////////////////////////
+
+const animationOnScroll = (variante) => {
+  return window.scrollY >= variante.offsetTop - window.innerHeight * 0.5;
+};
+
+const animationOffScroll = (variante) => {
+  return !(window.scrollY >= variante.offsetTop + window.innerHeight * 0.5);
+};
+
 ///////////////////////////////////////// NAVBAR //////////////////////////////////////////
 
 const nav = document.getElementById("navbar");
@@ -175,8 +185,10 @@ const about = document.getElementById("About");
 const aboutLeft = document.getElementById("aboutLeft");
 const aboutRight = document.getElementById("aboutRight");
 
-const aboutMedia = (width) => {
-  if (window.scrollY >= width && window.scrollY <= width + window.innerHeight) {
+const aboutToggle = () => {
+  console.log(animationOnScroll(about), animationOffScroll(about));
+
+  if (animationOnScroll(about) && animationOffScroll(about)) {
     aboutLeft.classList.add("activeAbout");
     aboutRight.classList.add("activeAbout");
   } else {
@@ -185,18 +197,9 @@ const aboutMedia = (width) => {
   }
 };
 
-const aboutToggle = () => {
-  if (window.innerWidth <= 450) {
-    aboutMedia(2400);
-  } else {
-    aboutMedia(2000);
-  }
-};
-
 window.addEventListener("scroll", aboutToggle);
 
 ///////////////////////////////////////// MATERIAL //////////////////////////////////////////
-
 
 ///////////////////////////////////////// FOOTER //////////////////////////////////////////
 
