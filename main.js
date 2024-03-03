@@ -186,7 +186,6 @@ const aboutLeft = document.getElementById("aboutLeft");
 const aboutRight = document.getElementById("aboutRight");
 
 const aboutToggle = () => {
-  console.log(animationOnScroll(about), animationOffScroll(about));
 
   if (animationOnScroll(about) && animationOffScroll(about)) {
     aboutLeft.classList.add("activeAbout");
@@ -198,8 +197,6 @@ const aboutToggle = () => {
 };
 
 window.addEventListener("scroll", aboutToggle);
-
-///////////////////////////////////////// MATERIAL //////////////////////////////////////////
 
 ///////////////////////////////////////// FOOTER //////////////////////////////////////////
 

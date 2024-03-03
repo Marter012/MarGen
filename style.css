@@ -19,16 +19,6 @@ body {
     #9ce3d4
   );
 }
-
-.WhatsApp {
-  position: fixed;
-  z-index: +5;
-  bottom: 30px;
-  right: 30px;
-}
-.WhatsApp img {
-  width: 60px;
-}
 /* ---------------------------------------------------NABVAR---------------------------------------------------------- */
 header {
   width: 100vw;
@@ -66,6 +56,7 @@ header {
   color: black;
   text-decoration: none;
   transition: 0.25s ease;
+  font-weight: 500;
 }
 
 .navbarItems ul {
@@ -80,10 +71,11 @@ header {
 }
 
 .navbarItems ul:hover a {
-  color: #9e9290;
+  color: rgba(0, 0, 0, 0.4);
 }
 .navbarItems ul:hover a:hover {
   color: black;
+  transition-duration: 0.5s;
   box-shadow: 0 2px 0 0 currentColor;
 }
 
@@ -299,7 +291,7 @@ header {
 }
 
 .cardsCategories:hover {
-  box-shadow: 0 14px 28px white, 0 10px 10px white;
+  box-shadow: 0 14px 28px black, 0 10px 10px black;
   transition: 1s;
 }
 
@@ -322,6 +314,7 @@ header {
   h3 {
     width: 100%;
     padding: 20px;
+    font-size: 1.7rem;
     background-color: rgb(250, 250, 250, 0.8);
     text-align: center;
     opacity: 1;
@@ -349,6 +342,13 @@ header {
   top: -100%;
   background-color: rgb(250, 250, 250, 0.8);
   padding: 20px;
+
+  h3{
+    font-size: 1.9rem;
+  }
+  p{
+    font-size: 1.2rem;
+  }
 }
 
 /* ---------------------------------------------------SLIDER - IMG ---------------------------------------------------------- */
@@ -384,10 +384,20 @@ header {
 
 .slidersInfo {
   width: 50%;
+  height: 80%;
   text-align: center;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   color: wheat;
   margin: 3%;
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1.3rem;
+  }
 }
 
 .sliders img {
@@ -396,7 +406,7 @@ header {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .prevContainerSliders,
   .nextContainerSliders {
     display: none;
@@ -565,8 +575,8 @@ header {
 .containerMaterial {
   width: 100vw;
   height: 40%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   overflow: hidden;
   display: flex;
   justify-content: space-around;
@@ -574,6 +584,7 @@ header {
 }
 .cardMaterialIcon{
   display: flex;
+
   width: 50%;
   height: 50%;
   justify-content: space-evenly;
@@ -584,7 +595,7 @@ header {
   height: 90%;
   width: 40%;
   display: flex;
-  color: white;
+  color: black;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -595,11 +606,11 @@ header {
     filter: drop-shadow(15px 5px 5px #222);
   }
   h3{
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   p{
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 400;
   }
 }
 
